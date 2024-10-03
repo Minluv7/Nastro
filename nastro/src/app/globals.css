@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3, p, a {
+    @apply text-textColor;
+  }
+}
+
+body {
+  font-family: 'Exo', sans-serif;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('/fonts/Exo-Regular.ttf') format('truetype'),
+  url('/fonts/Exo-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
