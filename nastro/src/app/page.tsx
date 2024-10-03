@@ -16,21 +16,6 @@ export default function Home() {
   interface HoroscopeResult {
     horoscope: {
       sunSign: string;
-      moonSign: string;
-      ascendant: string;
-      horoscope: string;
-      venus: string;
-      mars: string;
-      jupiter: string;
-      saturn: string;
-      mercury: string;
-      rahu: string;
-      ketu: string;
-      uranus: string;
-      neptune: string;
-      pluto: string;
-      lagnaChart: string;
-      navamsaChart: string;
     };
   }
 
@@ -90,18 +75,7 @@ export default function Home() {
           <div>
             <h2>Horoscope Results:</h2>
             <p>Sun Sign: {result.horoscope.sunSign}</p>
-            <p>Moon Sign: {result.horoscope.moonSign}</p>
-            <p>Ascendant: {result.horoscope.ascendant}</p>
-            <p>Venus: {result.horoscope.venus}</p>
-            <p>Mars: {result.horoscope.mars}</p>
-            <p>Jupiter: {result.horoscope.jupiter}</p>
-            <p>Saturn: {result.horoscope.saturn}</p>
-            <p>Mercury: {result.horoscope.mercury}</p>
-            <p>Rahu: {result.horoscope.rahu}</p>
-            <p>Ketu: {result.horoscope.ketu}</p>
-            <p>Uranus: {result.horoscope.uranus}</p>
-            <p>Neptune: {result.horoscope.neptune}</p>
-            <p>Pluto: {result.horoscope.pluto}</p>
+         
           </div>
         )}
       </div>
