@@ -2,13 +2,24 @@ export async function POST(req: Request) {
   try {
     const data = await req.json();
     const { birthday } = data;
-    
-    // Parse the birthday string into a Date object
-    const birthDate = new Date(birthday);
-    const month = birthDate.getUTCMonth() + 1;  // Get month (1-12)
-    const day = birthDate.getUTCDate();  // Get day (1-31)
 
-    // Horoscope calculation logic
+    // Validatie van de invoer
+    if (!birthday) {
+      return new Response(JSON.stringify({ message: "Missing birthday" }), { status: 400 });
+    }
+
+    // Parse de geboortedatum
+    const birthDate = new Date(birthday);
+    
+    // Controleer of de geboortedatum geldig is
+    if (isNaN(birthDate.getTime())) {
+      return new Response(JSON.stringify({ message: "Invalid date" }), { status: 400 });
+    }
+
+    const month = birthDate.getUTCMonth() + 1; // Maand (1-12)
+    const day = birthDate.getUTCDate(); // Dag (1-31)
+
+    // Horoscoop berekeningslogica
     let sunSign = "";
     if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
       sunSign = "Aries";
@@ -35,13 +46,13 @@ export async function POST(req: Request) {
     } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
       sunSign = "Pisces";
     }
-    
-    // Return the horoscope result
-    const result = { horoscope: { sunSign } };
 
+    // Geef het horoscoop resultaat terug
+    const result = { horoscope: { sunSign } };
+    
     return new Response(JSON.stringify(result), { status: 200 });
   } catch (error) {
-    console.error(error);
+    console.error("Error processing request:", error);
     return new Response(JSON.stringify({ message: "Error processing request" }), { status: 500 });
   }
 }
