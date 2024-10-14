@@ -1,53 +1,17 @@
+// pages/Home.tsx
 "use client";
 import { useState } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import HouseResults from '@/components/houseResults'; 
+import PlanetResults from '@/components/planetResults'; 
+import Popup from '@/components/popup'; // Vergeet niet de Popup te importeren
 
 export default function Home() {
-    const [result, setResult] = useState<HoroscopeResult | null>(null);
-    const [houseData, setHouse] = useState<HouseResult | null>(null);
     const [fullName, setFullName] = useState<string | null>(null);
-    const [planetData, setPlanetData] = useState<PlanetResult | null>(null); 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const [formData, setFormData] = useState<any | null>(null);
+    const [isPopupOpen, setIsPopupOpen] = useState(false); // Voor de popup
 
-    interface FormData {
-        fullName: string;
-        lat: number;
-        lon: number;
-        birthday: string;
-        timeOfBirth: string;
-    }
-
-    interface HoroscopeResult {
-        horoscope: {
-            sunSign: string;
-        };
-    }
-
-    interface HouseResult {
-        houses: {
-            house1: number;
-            house2: number;
-            house3: number;
-            house4: number;
-            house5: number;
-            house6: number;
-            house7: number;
-            house8: number;
-            house9: number;
-            house10: number;
-            house11: number;
-            house12: number;
-        };
-    }
-
-    interface PlanetResult {
-        planets: {
-            planet: string;
-            position: number;
-            sign: string;
-        }[];
-    }
-
-    // Nominatim-geocoder functie om plaatsnaam om te zetten naar lat/lon
     const geocodePlaceName = async (placeName: string) => {
         const geocodeUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(placeName)}&format=json&limit=1`;
         const response = await fetch(geocodeUrl);
@@ -66,15 +30,13 @@ export default function Home() {
         e.preventDefault();
 
         const fullName = e.currentTarget.fullName.value;
-        const placeName = e.currentTarget.placeName.value; // Haal plaatsnaam uit het formulier
+        const placeName = e.currentTarget.placeName.value;
         const birthday = e.currentTarget.birthday.value;
         const timeOfBirth = e.currentTarget.timeofbirth.value;
 
         try {
             const location = await geocodePlaceName(placeName);
-            console.log('Gevonden coördinaten:', location);
-
-            const data: FormData = {
+            const formData = {
                 fullName,
                 lat: location.lat,
                 lon: location.lon,
@@ -82,84 +44,14 @@ export default function Home() {
                 timeOfBirth,
             };
 
-            setFullName(data.fullName);
-            console.log('Form data:', data);
+            setFullName(formData.fullName);
+            setFormData(formData);
+            setIsPopupOpen(true); // Open de popup met de resultaten
 
-            // Fetch horoscope result
-            const horoscopeResponse = await fetch("/api/horoscope", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
-
-            const horoscopeResult: HoroscopeResult = await horoscopeResponse.json();
-            setResult(horoscopeResult);
-            console.log('Horoscope response:', horoscopeResponse);
-
-            // Fetch house result
-            const houseResponse = await fetch("/api/houses", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-            });
-
-            const responseText = await houseResponse.text(); 
-            console.log('House response text:', responseText); 
-
-           
-
-               // Fetch planet result
-         const planetResponse = await fetch("/api/planets", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
-        });
-    
-        const planetResponseText = await planetResponse.text();
-        console.log('Planet response text:', planetResponseText);
-        
-        try {
-            const planetData: PlanetResult = JSON.parse(planetResponseText);
-            setPlanetData(planetData);
-        
         } catch (error) {
-            console.error('Error parsing planet response:', error);
-        };
-        try {
-            const houseData: HouseResult = JSON.parse(responseText);
-            setHouse(houseData);
-        } catch (error) {
-            console.error('Error parsing house response:', error);
-        };
-        }
-        catch (error) {
             console.error('Error fetching horoscope:', error);
         }
-    }
-      
-    
- 
-    const getSignFromDegree = (degree: number): string => {
-        if (degree >= 0 && degree < 30) return 'Aries';
-        if (degree >= 30 && degree < 60) return 'Taurus';
-        if (degree >= 60 && degree < 90) return 'Gemini';
-        if (degree >= 90 && degree < 120) return 'Cancer';
-        if (degree >= 120 && degree < 150) return 'Leo';
-        if (degree >= 150 && degree < 180) return 'Virgo';
-        if (degree >= 180 && degree < 210) return 'Libra';
-        if (degree >= 210 && degree < 240) return 'Scorpio';
-        if (degree >= 240 && degree < 270) return 'Sagittarius';
-        if (degree >= 270 && degree < 300) return 'Capricorn';
-        if (degree >= 300 && degree < 330) return 'Aquarius';
-        if (degree >= 330 && degree < 360) return 'Pisces';        
-        return '';
     };
-
-    const roundToTwoDecimals = (num: number): number => {
-        return Math.round(num * 100) / 100;
-    };
-
-console.log('Planet data:', planetData);
 
     return (
         <div>
@@ -181,49 +73,17 @@ console.log('Planet data:', planetData);
 
                         Birthday and time:
                         <input type="date" name="birthday" required />
-
                         <input type="time" name="timeofbirth" required />
                     </label>
                     <button type="submit">Calculate</button>
                 </form>
 
-                {result && (
-                    <div>
-                        <h2>Horoscope Results:</h2>
-                        <p>Full name: {fullName}</p>
-                        <p>Sun Sign: {result.horoscope.sunSign}</p>
-                    </div>
-                )}
-
-                {houseData && houseData.houses && (
-                    <div className="my-4">
-                        <h2 className="text-xl font-bold text-blue-600">House Results:</h2>
-                        <ul className="list-disc list-inside space-y-2">
-                            {Object.entries(houseData.houses).map(([key, degree]) => {
-                                const degreeValue = roundToTwoDecimals(degree as number);
-                                return (
-                                    <li key={key} className="text-gray-700">
-                                        {key.charAt(0).toUpperCase() + key.slice(1)}: {degreeValue}° - {getSignFromDegree(degreeValue)}
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                )}
-
-{planetData && planetData.planets && (
-    <div className="my-4">
-        <h2 className="text-xl font-bold text-green-600">Planet Horoscope:</h2>
-        <ul className="list-disc list-inside space-y-2">
-            {planetData.planets.map((planet, index) => (
-                <li key={index} className="text-gray-700">
-                    {planet.planet.charAt(0).toUpperCase() + planet.planet.slice(1)}: {roundToTwoDecimals(planet.position)}° - {planet.sign}
-                </li>
-            ))}
-        </ul>
-    </div>
-)}
-
+                <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
+                    <h2>Horoscope Results:</h2>
+                    <p>Full name: {fullName}</p>
+                    <PlanetResults formData={formData} />
+                    <HouseResults formData={formData} />
+                </Popup>
             </div>
         </div>
     );

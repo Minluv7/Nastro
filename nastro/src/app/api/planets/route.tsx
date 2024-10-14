@@ -55,9 +55,9 @@ export async function POST(req: Request) {
 // Hulpfunctie om sterrenbeeld op basis van graden te krijgen
 const getSignFromDegree = (degree: number) => {
     const signs = [
-        'Ram', 'Stier', 'Tweelingen', 'Kreeft', 'Leeuw',
-        'Maagd', 'Weegschaal', 'Schorpioen', 'Boogschutter',
-        'Steenbok', 'Waterman', 'Vissen'
+        'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo',
+        'Virgo', 'Libra', 'Scorpio', 'Sagittarius',
+        'Capricorn', 'Aquarius', 'Pisces',
     ];
     return signs[Math.floor(degree / 30)];
 };
