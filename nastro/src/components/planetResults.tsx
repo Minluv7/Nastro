@@ -35,7 +35,7 @@ const PlanetResults = ({ formData }: { formData: any }) => {
     return (
         <div>
             {planetData && planetData.planets && (
-                <div className="my-4">
+                <div className="my-4 ">
                     <h2 className="text-xl font-bold text-green-600">Planet Horoscope:</h2>
                     <ul className="list-disc list-inside space-y-2">
                     {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}

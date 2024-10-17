@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className="bg-background">
+      <body className="bg-background" style={{ backgroundImage: 'url(/background.png)' }}>
       <Navbar className="mb-8"/>
         {children}
       </body>
