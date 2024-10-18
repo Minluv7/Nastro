@@ -4,7 +4,6 @@ import swe from 'sweph';
 export async function POST(req: Request) {
     const { birthday, timeOfBirth } = await req.json();
     try {
-       
 
         // Omzetten van de geboortedatum en tijd naar een juliaanse datum
         const year = new Date(birthday).getFullYear();
@@ -19,7 +18,7 @@ export async function POST(req: Request) {
         const gregflag = 1; // Gregoriaanse kalender
 
         const julianDate = swe.julday(year, month, day, time, gregflag);
-
+        
         // Bepaal de planeten
         const planetCodes = {
             SUN: 0,
