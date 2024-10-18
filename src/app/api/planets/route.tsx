@@ -1,17 +1,6 @@
 import { NextResponse } from 'next/server';
 import swe from 'sweph';
 
-
-// Hulpfunctie om sterrenbeeld op basis van graden te krijgen
-const getSignFromDegree = (degree: number) => {
-    const signs = [
-        'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo',
-        'Virgo', 'Libra', 'Scorpio', 'Sagittarius',
-        'Capricorn', 'Aquarius', 'Pisces',
-    ];
-    return signs[Math.floor(degree / 30)];
-};
-
 export async function POST(req: Request) {
     const { birthday, timeOfBirth } = await req.json();
     try {
@@ -63,3 +52,12 @@ export async function POST(req: Request) {
     }
 }
 
+// Hulpfunctie om sterrenbeeld op basis van graden te krijgen
+const getSignFromDegree = (degree: number) => {
+    const signs = [
+        'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo',
+        'Virgo', 'Libra', 'Scorpio', 'Sagittarius',
+        'Capricorn', 'Aquarius', 'Pisces',
+    ];
+    return signs[Math.floor(degree / 30)];
+};
