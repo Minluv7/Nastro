@@ -12,8 +12,6 @@ export default function Home() {
     const [formData, setFormData] = useState<any | null>(null);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    //fetch
-    
 
     const geocodePlaceName = async (placeName: string) => {
         const geocodeUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(placeName)}&format=json&limit=1`;
