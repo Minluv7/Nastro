@@ -1,7 +1,7 @@
 {
     "build": {
       "env": {
-        "NODE_ENV": "production"
+        "NPM_CONFIG_BUILD_FROM_SOURCE": "true"
       }
     }
   }
