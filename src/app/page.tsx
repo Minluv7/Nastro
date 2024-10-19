@@ -90,7 +90,7 @@ export default function Home() {
     
 
     return (
-        <div className="flex flex-wrap items-center min-h-screen ">
+        <div className="flex flex-wrap justify-center items-center min-h-screen ">
             <DotLottieReact
                 className="w-full md:w-[50%] items-center"
                 src="https://lottie.host/25e4cfe2-7935-4ff5-b534-8e4106ba61a2/TWME2CFNAO.json"
@@ -124,7 +124,6 @@ export default function Home() {
                                 required
                             />
                         </div>
-                       
                             <div className="flex flex-col w-[100%] md:w-[40%]">
                                 <span className="mb-2">Birthday</span>
                                 <input 
@@ -135,25 +134,24 @@ export default function Home() {
                                     required
                                 />
                             </div>
-                            <div className='flex justify-between gap-4'>
-                            <div className="flex flex-col w-[100%] md:w-[40%]">
-                                <span className="mb-2">Time of birth</span>
-                                <input 
-                                    className="mt-2 p-3 border-t-2 border-b-2 border-gray-400 bg-transparent text-center text-xl focus:outline-none focus:border-blue-400 transition-all duration-300"
-                                    type="time" 
-                                    name="timeofbirth" 
-                                    required 
-                                    placeholder='HH:MM'
-                                />
+                            <div className='flex flex-col md:flex-row justify-between gap-4'>
+                                <div className="flex flex-col w-full md:w-[40%]">
+                                    <span className="mb-2">Time of birth</span>
+                                    <input 
+                                        className="mt-2 p-3 border-t-2 border-b-2 border-gray-400 bg-transparent text-center text-xl focus:outline-none focus:border-blue-400 transition-all duration-300"
+                                        type="time" 
+                                        name="timeofbirth" 
+                                        required 
+                                        placeholder='HH:MM'
+                                    />
+                                </div>
+                                <button 
+                                    className="mt-4 p-4 md:mt-8 w-full md:w-[40%] bg-gradient-to-r tracking-widest hover:from-black hover:to-black bg-background text-textColor uppercase rounded-md shadow-lg transition-all duration-300 transform hover:scale-105"
+                                    type="submit"
+                                >
+                                    Calculate
+                                </button>
                             </div>
-                        
-                        <button 
-                            className="mt-8 w-full md:w-[10rem] bg-gradient-to-r tracking-widest hover:from-black hover:to-black bg-background text-textColor uppercase py-3 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105"
-                            type="submit"
-                        >
-                            Calculate
-                        </button>
-                        </div>
                     </label>
                 </form>
     
