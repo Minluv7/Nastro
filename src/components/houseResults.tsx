@@ -51,7 +51,7 @@ const HouseResults = ({ formData }: { formData: any }) => {
     return (
         <div>
             {houseData && houseData.houses && (
-                <div className="my-4">
+                <div className="m-8">
                     <h2 className="text-xl font-bold text-blue-600">House Results:</h2>
                     <ul className="list-disc list-inside space-y-2">
                         {Object.entries(houseData.houses).map(([key, degree]) => {

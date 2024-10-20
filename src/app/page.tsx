@@ -5,6 +5,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import HouseResults from '@/components/houseResults'; 
 import PlanetResults from '@/components/planetResults'; 
 import Popup from '@/components/popup';
+import AudioPlayer from '@/components/audioPlayer';
 
 export default function Home() {
     const [fullName, setFullName] = useState<string | null>(null);
@@ -29,12 +30,12 @@ export default function Home() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
         e.preventDefault();
-    
+
         const fullName = e.currentTarget.fullName.value;
         const placeName = e.currentTarget.placeName.value;
         const birthday = e.currentTarget.birthday.value;
         const timeOfBirth = e.currentTarget.timeofbirth.value;
-    
+
         try {
             const location = await geocodePlaceName(placeName);
             const formData = {
@@ -44,45 +45,11 @@ export default function Home() {
                 birthday,
                 timeOfBirth,
             };
-    
+
             setFullName(formData.fullName);
             setFormData(formData);
             setIsPopupOpen(true); // Open the popup with results
-    
-            // Maak de API-aanroep voor de planeten
-            const planetResponse = await fetch('/api/planets', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ birthday, timeOfBirth }),
-            });
-    
-            if (!planetResponse.ok) {
-                throw new Error('Failed to fetch planet data');
-            }
-    
-            const planetData = await planetResponse.json();
-            // Verwerk de planetData zoals nodig, bijv. instellen in een state voor PlanetResults
-            console.log('Planet Data:', planetData);
-    
-            // Maak de API-aanroep voor de huizen
-            const houseResponse = await fetch('/api/houses', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ lat: location.lat, lon: location.lon, birthday, timeOfBirth }),
-            });
-    
-            if (!houseResponse.ok) {
-                throw new Error('Failed to fetch house data');
-            }
-    
-            const houseData = await houseResponse.json();
-            // Verwerk de houseData zoals nodig, bijv. instellen in een state voor HouseResults
-            console.log('House Data:', houseData);
-    
+
         } catch (error) {
             console.error('Error fetching horoscope:', error);
         }
@@ -159,12 +126,14 @@ export default function Home() {
                     <h2>Horoscope Results:</h2>
                     <p>Full name: {fullName}</p>
                     {/* Container for planet and house results */}
-                    <div className="flex flex-col md:flex-row gap-4 mt-4">
+                    <div className="flex flex-col md:flex-row">
                         <PlanetResults formData={formData} />
                         <HouseResults formData={formData} />
                     </div>
                 </Popup>
+                
             </div>
+            <AudioPlayer />
         </div>
     );
     
