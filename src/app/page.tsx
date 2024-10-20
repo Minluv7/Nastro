@@ -9,10 +9,12 @@ import AudioPlayer from '@/components/audioPlayer';
 
 export default function Home() {
     const [fullName, setFullName] = useState<string | null>(null);
+    const [placeName, setPlaceName] = useState<string | null>(null);
+    const [birthday, setBirthday] = useState<string | null>(null);
+    const [timeOfBirth, setTimeOfBirth] = useState<string | null>(null);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [formData, setFormData] = useState<any | null>(null);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
-
 
     const geocodePlaceName = async (placeName: string) => {
         const geocodeUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(placeName)}&format=json&limit=1`;
@@ -47,7 +49,13 @@ export default function Home() {
             };
 
             setFullName(formData.fullName);
+            setPlaceName(placeName);
+            setBirthday(birthday);
+            setTimeOfBirth(timeOfBirth);
             setFormData(formData);
+
+           
+
             setIsPopupOpen(true); // Open the popup with results
 
         } catch (error) {
@@ -80,7 +88,6 @@ export default function Home() {
                                 placeholder="Enter your full name"
                             />
                         </div>
-                        
                         <div className="flex flex-col">
                             <span>Birthplace:</span>
                             <input 
@@ -124,7 +131,10 @@ export default function Home() {
     
                 <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
                     <h2>Horoscope Results:</h2>
-                    <p>Full name: {fullName}</p>
+                    <p>{fullName}</p>
+                    <p>{placeName}</p>
+                    <p>{birthday} {timeOfBirth}</p>
+
                     {/* Container for planet and house results */}
                     <div className="flex flex-col md:flex-row">
                         <PlanetResults formData={formData} />

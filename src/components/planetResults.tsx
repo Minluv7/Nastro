@@ -13,14 +13,12 @@ const PlanetResults = ({ formData }: { formData: any }) => {
     useEffect(() => {
         const fetchPlanetData = async () => {
             if (!formData) return; // Wacht tot formData beschikbaar is
-
             try {
                 const planetResponse = await fetch("/api/planets", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(formData),
                 });
-        
                 const planetResponseText = await planetResponse.text();
                 const planetData = JSON.parse(planetResponseText);
                 setPlanetData(planetData);
@@ -45,6 +43,14 @@ const PlanetResults = ({ formData }: { formData: any }) => {
                             </li>
                         ))}
                     </ul>
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                    {planetData.planets.map((planet: any) => (
+                        planet.planet.toLowerCase() === 'sun' && (
+                            <p key="sun-info" className="text-gray-700 mt-4">
+                                Your Horoscope is a: {planet.sign}
+                            </p>
+                        )
+                    ))}
                 </div>
             )}
         </div>

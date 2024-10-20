@@ -63,6 +63,10 @@ const HouseResults = ({ formData }: { formData: any }) => {
                             );
                         })}
                     </ul>
+                    {/* Herhaal de informatie van huis 1 */}
+                    <p className="text-gray-700 mt-4">
+                        Your ascendant is: {getSignFromDegree(roundToTwoDecimals(houseData.houses.house1 as number))}
+                    </p>
                 </div>
             )}
         </div>
