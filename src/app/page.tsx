@@ -53,9 +53,6 @@ export default function Home() {
             setBirthday(birthday);
             setTimeOfBirth(timeOfBirth);
             setFormData(formData);
-
-           
-
             setIsPopupOpen(true); // Open the popup with results
 
         } catch (error) {
@@ -63,15 +60,18 @@ export default function Home() {
         }
     };
     
-
     return (
-        <div className="flex flex-wrap justify-center items-center min-h-screen ">
+    <div> 
+        <h1 className="text-3xl uppercase font-bold mb-6">Calculate your horoscopes</h1>
+        <div className="flex flex-wrap justify-center items-center min-h-screen">
             <DotLottieReact
                 className="w-full md:w-[50%] items-center"
                 src="https://lottie.host/25e4cfe2-7935-4ff5-b534-8e4106ba61a2/TWME2CFNAO.json"
                 loop
                 autoplay
             />
+ 
+           
             <div className="w-full md:w-auto flex flex-wrap justify-center">
                 <form 
                     className="bg-white p-6 md:p-14 w-[90%] md:w-[35rem] flex flex-col items-center rounded-[1rem] md:rounded-[1rem_10rem] transition-all duration-300"
@@ -145,6 +145,7 @@ export default function Home() {
             </div>
             <AudioPlayer />
         </div>
+    </div>
     );
     
 }

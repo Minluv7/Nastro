@@ -1,0 +1,306 @@
+{
+    "horoscopes": [
+        {
+            "sign": "Aries",
+            "dateRange": "March 21 - April 19",
+            "image": "/horoscopes/aries.png",
+            "symbol": "Ram",
+            "description": {
+                "general": "Aries is the first sign of the zodiac, symbolized by the Ram, and it embodies the energy of new beginnings and leadership. As a fire sign, Aries is known for its bold, dynamic, and pioneering personality.",
+                "traits": [
+                    "natural leaders",
+                    "driven by a deep desire to take initiative",
+                    "forge their own paths",
+                    "confidence",
+                    "determination",
+                    "thrives in competitive environments",
+                    "not afraid to take risks",
+                    "ambitious nature"
+                ],
+                "strengths": "They are often the ones who start projects, tackle challenges head-on, and push others forward with their infectious enthusiasm. This ambitious nature can make them highly successful when they set their minds to something.",
+                "challenges": "However, their energetic and impulsive tendencies can also lead them to act quickly without thinking things through, sometimes resulting in hasty decisions or frustration when things don’t go as planned. Aries tends to have a fiery temper, but it usually cools down just as fast as it flares up. They are straightforward in their communication, preferring honesty and directness over subtlety.",
+                "zestForLife": "Aries also possesses a childlike zest for life. They are spontaneous, adventurous, and always eager to embark on new experiences, often inspiring those around them with their optimism and passion. Despite their fierce independence, they are deeply loyal to the people they care about and will go to great lengths to protect and support their loved ones.",
+                "relationships": {
+                    "seeking": "In relationships, Aries seeks excitement and is attracted to people who match their energy and enthusiasm for life.",
+                    "partnership": "They are passionate partners, though their strong-willed nature can sometimes lead to conflicts. Aries needs a partner who understands their need for freedom and respects their drive to pursue their goals."
+                }
+            },
+            "summary": "In summary, Aries is a sign of boldness, action, and endless drive, always ready to take on the world and push the boundaries of what’s possible. Their fearless spirit and natural charisma make them trailblazers in whatever they choose to pursue."
+        },
+        {
+            "sign": "Taurus",
+            "dateRange": "April 20 - May 20",
+            "image": "/horoscopes/taurus.png",
+            "symbol": "Bull",
+            "description": {
+                "general": "Taurus is the second sign of the zodiac, represented by the Bull. It is an earth sign known for its stability, practicality, and sensuality.",
+                "traits": [
+                    "reliable",
+                    "patient",
+                    "practical",
+                    "devoted",
+                    "responsible",
+                    "determined"
+                ],
+                "strengths": "Taurus individuals are known for their persistence and strong will. They are reliable friends and partners who value stability and consistency in life.",
+                "challenges": "On the downside, their stubbornness can make them resistant to change and overly cautious. They may take a long time to adapt to new situations.",
+                "zestForLife": "Taurus enjoys the finer things in life and has a deep appreciation for beauty, art, and nature. They are often found indulging in good food, luxurious surroundings, and physical comforts.",
+                "relationships": {
+                    "seeking": "In relationships, Taurus seeks security and loyalty. They are committed partners who appreciate stability in their romantic life.",
+                    "partnership": "Their strong sensuality makes them passionate lovers, but their possessive nature can sometimes lead to conflicts."
+                }
+            },
+            "summary": "In summary, Taurus represents reliability, strength, and a love for comfort, making them steadfast companions who enjoy the pleasures of life."
+        },
+        {
+            "sign": "Gemini",
+            "dateRange": "May 21 - June 20",
+            "image": "/horoscopes/gemini.png",
+            "symbol": "Twins",
+            "description": {
+                "general": "Gemini is the third sign of the zodiac, represented by the Twins. It is an air sign characterized by versatility, curiosity, and communication.",
+                "traits": [
+                    "adaptable",
+                    "intellectual",
+                    "communicative",
+                    "social",
+                    "curious",
+                    "witty"
+                ],
+                "strengths": "Geminis are known for their quick wit and ability to engage in conversations. They are social butterflies, thriving in environments where they can interact with others.",
+                "challenges": "However, their dual nature can make them indecisive and inconsistent at times. They may struggle with commitment and often feel restless.",
+                "zestForLife": "Gemini individuals are adventurous and enjoy exploring new ideas, places, and experiences. They have a childlike curiosity that keeps life exciting.",
+                "relationships": {
+                    "seeking": "In relationships, Geminis seek stimulation and variety. They are drawn to partners who can keep up with their fast-paced minds.",
+                    "partnership": "While they are charming and flirtatious, they may have difficulty settling down due to their need for freedom."
+                }
+            },
+            "summary": "In summary, Gemini embodies adaptability and communication, making them lively companions who keep conversations fresh and interesting."
+        },
+        {
+            "sign": "Cancer",
+            "dateRange": "June 21 - July 22",
+            "image": "/horoscopes/cancer.png",
+            "symbol": "Crab",
+            "description": {
+                "general": "Cancer is the fourth sign of the zodiac, represented by the Crab. It is a water sign known for its emotional depth, intuition, and nurturing qualities.",
+                "traits": [
+                    "empathetic",
+                    "sensitive",
+                    "intuitive",
+                    "protective",
+                    "nurturing",
+                    "loyal"
+                ],
+                "strengths": "Cancers are deeply caring individuals who prioritize family and close relationships. They are natural caregivers, often putting the needs of others before their own.",
+                "challenges": "However, their emotional nature can make them overly sensitive and prone to mood swings. They may withdraw when feeling hurt or threatened.",
+                "zestForLife": "Cancers enjoy creating a sense of home and belonging. They find joy in traditions and often create warm, inviting spaces for their loved ones.",
+                "relationships": {
+                    "seeking": "In relationships, Cancers seek emotional security and connection. They are devoted partners who value trust and loyalty.",
+                    "partnership": "Their nurturing nature makes them supportive lovers, but they may become clingy if they feel insecure."
+                }
+            },
+            "summary": "In summary, Cancer represents emotional depth and nurturing, making them compassionate companions who cherish their loved ones."
+        },
+        {
+            "sign": "Leo",
+            "dateRange": "July 23 - August 22",
+            "image": "/horoscopes/leo.png",
+            "symbol": "Lion",
+            "description": {
+                "general": "Leo is the fifth sign of the zodiac, represented by the Lion. It is a fire sign known for its charisma, creativity, and leadership.",
+                "traits": [
+                    "confident",
+                    "generous",
+                    "charismatic",
+                    "dramatic",
+                    "creative",
+                    "ambitious"
+                ],
+                "strengths": "Leos are natural leaders and often take center stage. They are warm-hearted individuals who enjoy bringing joy to others.",
+                "challenges": "However, their desire for attention can sometimes lead to egocentric behavior. They may struggle with pride and need for validation.",
+                "zestForLife": "Leos thrive on creativity and self-expression. They are drawn to the arts and enjoy being in the spotlight.",
+                "relationships": {
+                    "seeking": "In relationships, Leos seek admiration and affection. They are passionate partners who enjoy grand gestures of love.",
+                    "partnership": "Their strong personalities can create intensity in relationships, but their loyalty makes them dedicated lovers."
+                }
+            },
+            "summary": "In summary, Leo embodies charisma and creativity, making them vibrant companions who light up any room they enter."
+        },
+        {
+            "sign": "Virgo",
+            "dateRange": "August 23 - September 22",
+            "image": "/horoscopes/virgo.png",
+            "symbol": "Virgin",
+            "description": {
+                "general": "Virgo is the sixth sign of the zodiac, represented by the Virgin. It is an earth sign known for its analytical mind, attention to detail, and practicality.",
+                "traits": [
+                    "meticulous",
+                    "practical",
+                    "analytical",
+                    "humble",
+                    "reliable",
+                    "hardworking"
+                ],
+                "strengths": "Virgos are known for their organization and efficiency. They excel in problem-solving and often provide valuable insights.",
+                "challenges": "However, their perfectionist tendencies can lead to self-criticism and stress. They may struggle with letting go of control.",
+                "zestForLife": "Virgos appreciate simplicity and find joy in the little things. They are often health-conscious and enjoy routines that promote well-being.",
+                "relationships": {
+                    "seeking": "In relationships, Virgos seek stability and reliability. They are devoted partners who value honesty and loyalty.",
+                    "partnership": "Their practical nature makes them supportive lovers, but they may have difficulty expressing their emotions."
+                }
+            },
+            "summary": "In summary, Virgo represents practicality and attention to detail, making them reliable companions who bring order to any situation."
+        },
+        {
+            "sign": "Libra",
+            "dateRange": "September 23 - October 22",
+            "image": "/horoscopes/libra.png",
+            "symbol": "Scales",
+            "description": {
+                "general": "Libra is the seventh sign of the zodiac, represented by the Scales. It is an air sign known for its love of harmony, balance, and beauty.",
+                "traits": [
+                    "charming",
+                    "diplomatic",
+                    "social",
+                    "graceful",
+                    "idealistic",
+                    "romantic"
+                ],
+                "strengths": "Libras are known for their ability to create harmony in relationships. They are diplomatic individuals who value fairness and justice.",
+                "challenges": "However, their indecisiveness can lead to difficulties in making choices. They may struggle with confrontation and avoidance of conflict.",
+                "zestForLife": "Libras appreciate beauty in all forms, from art to relationships. They enjoy social gatherings and often seek out meaningful connections.",
+                "relationships": {
+                    "seeking": "In relationships, Libras seek companionship and balance. They are loving partners who value collaboration.",
+                    "partnership": "Their romantic nature makes them devoted lovers, but they may struggle with dependency."
+                }
+            },
+            "summary": "In summary, Libra embodies harmony and beauty, making them charming companions who foster connections and understanding."
+        },
+        {
+            "sign": "Scorpio",
+            "dateRange": "October 23 - November 21",
+            "image": "/horoscopes/scorpio.png",
+            "symbol": "Scorpion",
+            "description": {
+                "general": "Scorpio is the eighth sign of the zodiac, represented by the Scorpion. It is a water sign known for its intensity, passion, and depth.",
+                "traits": [
+                    "mysterious",
+                    "passionate",
+                    "intuitive",
+                    "determined",
+                    "resourceful",
+                    "loyal"
+                ],
+                "strengths": "Scorpios are known for their strong will and determination. They possess deep emotional intelligence and are often seen as magnetic individuals.",
+                "challenges": "However, their intensity can lead to jealousy and possessiveness. They may struggle with trust issues and can be secretive.",
+                "zestForLife": "Scorpios are drawn to the mysteries of life and enjoy exploring the depths of human emotion. They have a passionate approach to life and relationships.",
+                "relationships": {
+                    "seeking": "In relationships, Scorpios seek deep connections and loyalty. They are intense partners who crave emotional intimacy.",
+                    "partnership": "Their passionate nature can create intense relationships, but they need a partner who can handle their emotional depth."
+                }
+            },
+            "summary": "In summary, Scorpio embodies passion and intensity, making them powerful companions who dive deep into life's experiences."
+        },
+        {
+            "sign": "Sagittarius",
+            "dateRange": "November 22 - December 21",
+            "image": "/horoscopes/sagittarius.png",
+            "symbol": "Archer",
+            "description": {
+                "general": "Sagittarius is the ninth sign of the zodiac, represented by the Archer. It is a fire sign known for its adventurous spirit, optimism, and philosophical outlook.",
+                "traits": [
+                    "adventurous",
+                    "optimistic",
+                    "independent",
+                    "philosophical",
+                    "open-minded",
+                    "spontaneous"
+                ],
+                "strengths": "Sagittarians are known for their love of freedom and exploration. They are enthusiastic individuals who inspire others with their positivity.",
+                "challenges": "However, their desire for independence can make them restless and sometimes unreliable. They may struggle with commitment.",
+                "zestForLife": "Sagittarians enjoy travel and new experiences, often seeking out adventures that expand their horizons.",
+                "relationships": {
+                    "seeking": "In relationships, Sagittarians seek freedom and intellectual stimulation. They are enthusiastic partners who enjoy shared adventures.",
+                    "partnership": "While they are passionate, they may have difficulty with emotional depth and prefer lighthearted connections."
+                }
+            },
+            "summary": "In summary, Sagittarius represents adventure and exploration, making them spirited companions who inspire others to seek new experiences."
+        },
+        {
+            "sign": "Capricorn",
+            "dateRange": "December 22 - January 19",
+            "image": "/horoscopes/capricorn.png",
+            "symbol": "Goat",
+            "description": {
+                "general": "Capricorn is the tenth sign of the zodiac, represented by the Goat. It is an earth sign known for its ambition, discipline, and practicality.",
+                "traits": [
+                    "ambitious",
+                    "disciplined",
+                    "responsible",
+                    "practical",
+                    "patient",
+                    "determined"
+                ],
+                "strengths": "Capricorns are known for their strong work ethic and commitment to their goals. They are reliable individuals who can be counted on in tough times.",
+                "challenges": "However, their focus on success can sometimes lead to workaholism and neglect of personal relationships. They may struggle with flexibility.",
+                "zestForLife": "Capricorns value structure and stability in life. They often enjoy setting goals and achieving them through hard work.",
+                "relationships": {
+                    "seeking": "In relationships, Capricorns seek stability and reliability. They are loyal partners who value commitment.",
+                    "partnership": "Their practical nature makes them dependable lovers, but they may have difficulty expressing their emotions."
+                }
+            },
+            "summary": "In summary, Capricorn embodies ambition and discipline, making them steadfast companions who work diligently toward their goals."
+        },
+        {
+            "sign": "Aquarius",
+            "dateRange": "January 20 - February 18",
+            "image": "/horoscopes/aquarius.png",
+            "symbol": "Water Bearer",
+            "description": {
+                "general": "Aquarius is the eleventh sign of the zodiac, represented by the Water Bearer. It is an air sign known for its innovation, humanitarianism, and independence.",
+                "traits": [
+                    "innovative",
+                    "independent",
+                    "humanitarian",
+                    "intellectual",
+                    "progressive",
+                    "unique"
+                ],
+                "strengths": "Aquarians are known for their original ideas and visionary thinking. They are often seen as trendsetters and value their individuality.",
+                "challenges": "However, their independent nature can sometimes lead to emotional detachment. They may struggle with conformity and fitting into social norms.",
+                "zestForLife": "Aquarians enjoy exploring new concepts and ideas. They are drawn to social causes and often advocate for change.",
+                "relationships": {
+                    "seeking": "In relationships, Aquarians seek intellectual stimulation and freedom. They are open-minded partners who appreciate unique connections.",
+                    "partnership": "Their unconventional approach can create exciting relationships, but they may struggle with emotional depth."
+                }
+            },
+            "summary": "In summary, Aquarius represents innovation and independence, making them unique companions who inspire others to think outside the box."
+        },
+        {
+            "sign": "Pisces",
+            "dateRange": "February 19 - March 20",
+            "image": "/horoscopes/pisces.png",
+            "symbol": "Fish",
+            "description": {
+                "general": "Pisces is the twelfth sign of the zodiac, represented by the Fish. It is a water sign known for its sensitivity, intuition, and creativity.",
+                "traits": [
+                    "empathetic",
+                    "compassionate",
+                    "intuitive",
+                    "artistic",
+                    "dreamy",
+                    "selfless"
+                ],
+                "strengths": "Pisceans are known for their deep emotional understanding and creativity. They often have a strong connection to their inner world and are highly imaginative.",
+                "challenges": "However, their sensitivity can make them vulnerable to emotional turmoil. They may struggle with boundaries and escapism.",
+                "zestForLife": "Pisceans enjoy expressing their creativity through various forms of art. They are drawn to beauty and often find solace in nature.",
+                "relationships": {
+                    "seeking": "In relationships, Pisceans seek deep emotional connections. They are loving partners who value empathy and understanding.",
+                    "partnership": "Their compassionate nature makes them supportive lovers, but they may have difficulty with assertiveness."
+                }
+            },
+            "summary": "In summary, Pisces embodies sensitivity and creativity, making them compassionate companions who understand the emotions of others."
+        }
+    ]
+}
