@@ -1,11 +1,10 @@
-
 "use client";
 import { useState } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import HouseResults from '@/components/houseResults'; 
 import PlanetResults from '@/components/planetResults'; 
 import Popup from '@/components/popup';
-import AudioPlayer from '@/components/audioPlayer';
+
 
 export default function Home() {
     const [fullName, setFullName] = useState<string | null>(null);
@@ -70,8 +69,6 @@ export default function Home() {
                 loop
                 autoplay
             />
- 
-           
             <div className="w-full md:w-auto flex flex-wrap justify-center">
                 <form 
                     className="bg-white p-6 md:p-14 w-[90%] md:w-[35rem] flex flex-col items-center rounded-[1rem] md:rounded-[1rem_10rem] transition-all duration-300"
@@ -143,7 +140,6 @@ export default function Home() {
                 </Popup>
                 
             </div>
-            <AudioPlayer />
         </div>
     </div>
     );

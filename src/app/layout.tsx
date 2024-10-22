@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import "./globals.css";
-
+import ClientOnlyAudioPlayer from "@/components/clientOnlyAudioPlayer"; // Gebruik de client-only component
 
 export const metadata: Metadata = {
   title: "Nastro",
@@ -16,8 +16,10 @@ export default function RootLayout({
   return (
     <html>
       <body className="bg-background">
-      <Navbar className="mb-8"/>
+        <Navbar className="mb-8" />
+       
         {children}
+        <ClientOnlyAudioPlayer/> {/* Voeg de Client Component hier toe */}
       </body>
     </html>
   );
