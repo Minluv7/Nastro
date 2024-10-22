@@ -54,26 +54,35 @@ export default function HoroscopeDetailPage() {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-6">{horoscope.sign}</h1>
-      <Image
-        width={400}
-        height={400}
-        src={horoscope.image}
-        alt={horoscope.sign}
-        className="mb-4"
-      />
-      <p className="text-xl font-semibold">{horoscope.dateRange}</p>
-      <p className="mt-4">{horoscope.description.general}</p>
-      <h2 className="text-2xl font-bold mt-6">Traits</h2>
-      <ul className="list-disc ml-6 mt-2">
+      <h1 className="text-3xl uppercase font-bold mb-6">Horoscope {horoscope.sign} {horoscope.dateRange}</h1>
+      <div className='flex justify-center'>
+        <Image
+            width={400}
+            height={400}
+            src={horoscope.image}
+            alt={horoscope.sign}
+            className="mb-4"
+        />
+      </div>
+      <h2 className='text-2xl font-bold uppercase mt-6'>General</h2>
+      <p> {horoscope.description.general}</p>
+      <h2 className="text-2xl font-bold uppercase mt-6">Traits</h2>
+      <ul className="list-disc ml-6">
         {horoscope.description.traits.map((trait, index) => (
-          <li key={index}>{trait}</li>
+          <li className='text-white capitalize' key={index}>{trait}</li>
         ))}
       </ul>
-      <h2 className="text-2xl font-bold mt-6">Strengths</h2>
-      <p>{horoscope.description.strengths}</p>
-      <h2 className="text-2xl font-bold mt-6">Challenges</h2>
-      <p>{horoscope.description.challenges}</p>
+      <h2 className="text-2xl font-bold uppercase mt-6">Strengths</h2>
+        <p>{horoscope.description.strengths}</p>
+      <h2 className="text-2xl font-bold uppercase mt-6">Challenges</h2>
+        <p>{horoscope.description.challenges}</p>
+      <h2 className="text-2xl font-bold uppercase mt-6">Zest for life</h2>
+        <p>{horoscope.description.zestForLife}</p>
+      <h2 className="text-2xl font-bold uppercase mt-6">Relationships</h2>
+        <p>{horoscope.description.relationships.seeking}</p>
+        <p>{horoscope.description.relationships.partnership}</p>
+      <h2 className="text-2xl font-bold uppercase mt-6">Summary</h2>
+        <p>{horoscope.summary}</p>
     </div>
   );
 }
