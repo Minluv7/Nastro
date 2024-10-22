@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 
 export default function Page() {
   const [horoscopes, setHoroscopes] = useState<Horoscope[]>([]);
@@ -43,6 +43,7 @@ export default function Page() {
     
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {horoscopes.map((horoscope) => (
+      <Link href={`/horoscope/${horoscope.sign}`} key={horoscope.sign}>
         <li 
           key={horoscope.sign} 
           className="flex flex-col items-center shadow-md p-4 rounded-lg transform transition-transform duration-300 hover:scale-105"
@@ -57,6 +58,7 @@ export default function Page() {
           <h2 className="text-xl font-semibold mt-4">{horoscope.sign}</h2>
           <p className="text-gray-600">{horoscope.dateRange}</p>
         </li>
+      </Link>
       ))}
     </ul>
   </div>

@@ -11,6 +11,7 @@ interface HoroscopeDescription {
   }
   // eslint-disable-next-line
   interface Horoscope {
+    id: number;
     sign: string;
     dateRange: string;
     image: string;

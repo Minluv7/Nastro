@@ -1,6 +1,7 @@
 {
     "horoscopes": [
         {
+            "id": 1,
             "sign": "Aries",
             "dateRange": "March 21 - April 19",
             "image": "/horoscopes/aries.png",
@@ -28,6 +29,7 @@
             "summary": "In summary, Aries is a sign of boldness, action, and endless drive, always ready to take on the world and push the boundaries of what’s possible. Their fearless spirit and natural charisma make them trailblazers in whatever they choose to pursue."
         },
         {
+            "id": 2,
             "sign": "Taurus",
             "dateRange": "April 20 - May 20",
             "image": "/horoscopes/taurus.png",
@@ -53,6 +55,7 @@
             "summary": "In summary, Taurus represents reliability, strength, and a love for comfort, making them steadfast companions who enjoy the pleasures of life."
         },
         {
+            "id": 3,
             "sign": "Gemini",
             "dateRange": "May 21 - June 20",
             "image": "/horoscopes/gemini.png",
@@ -78,6 +81,7 @@
             "summary": "In summary, Gemini embodies adaptability and communication, making them lively companions who keep conversations fresh and interesting."
         },
         {
+            "id": 4,
             "sign": "Cancer",
             "dateRange": "June 21 - July 22",
             "image": "/horoscopes/cancer.png",
@@ -103,6 +107,7 @@
             "summary": "In summary, Cancer represents emotional depth and nurturing, making them compassionate companions who cherish their loved ones."
         },
         {
+            "id": 5,
             "sign": "Leo",
             "dateRange": "July 23 - August 22",
             "image": "/horoscopes/leo.png",
@@ -128,6 +133,7 @@
             "summary": "In summary, Leo embodies charisma and creativity, making them vibrant companions who light up any room they enter."
         },
         {
+            "id": 6,
             "sign": "Virgo",
             "dateRange": "August 23 - September 22",
             "image": "/horoscopes/virgo.png",
@@ -153,6 +159,7 @@
             "summary": "In summary, Virgo represents practicality and attention to detail, making them reliable companions who bring order to any situation."
         },
         {
+            "id": 7,
             "sign": "Libra",
             "dateRange": "September 23 - October 22",
             "image": "/horoscopes/libra.png",
@@ -178,6 +185,7 @@
             "summary": "In summary, Libra embodies harmony and beauty, making them charming companions who foster connections and understanding."
         },
         {
+            "id": 8,
             "sign": "Scorpio",
             "dateRange": "October 23 - November 21",
             "image": "/horoscopes/scorpio.png",
@@ -203,6 +211,7 @@
             "summary": "In summary, Scorpio embodies passion and intensity, making them powerful companions who dive deep into life's experiences."
         },
         {
+            "id": 9,
             "sign": "Sagittarius",
             "dateRange": "November 22 - December 21",
             "image": "/horoscopes/sagittarius.png",
@@ -228,6 +237,7 @@
             "summary": "In summary, Sagittarius represents adventure and exploration, making them spirited companions who inspire others to seek new experiences."
         },
         {
+            "id": 10,
             "sign": "Capricorn",
             "dateRange": "December 22 - January 19",
             "image": "/horoscopes/capricorn.png",
@@ -253,6 +263,7 @@
             "summary": "In summary, Capricorn embodies ambition and discipline, making them steadfast companions who work diligently toward their goals."
         },
         {
+            "id": 11,
             "sign": "Aquarius",
             "dateRange": "January 20 - February 18",
             "image": "/horoscopes/aquarius.png",
@@ -278,6 +289,7 @@
             "summary": "In summary, Aquarius represents innovation and independence, making them unique companions who inspire others to think outside the box."
         },
         {
+            "id": 12,
             "sign": "Pisces",
             "dateRange": "February 19 - March 20",
             "image": "/horoscopes/pisces.png",
