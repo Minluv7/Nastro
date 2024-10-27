@@ -1,0 +1,19 @@
+{
+    "Moon":{
+        "image": "/moon/moon.png",
+        "description": {
+            "general": "The Moon is the luminary that governs our emotions, intuition, and subconscious mind. It represents our inner world and hidden desires, revealing our emotional needs and vulnerabilities.",
+            "phases": {
+                "New Moon": "The Moon is aligned with the Sun and the Earth, making the side facing Earth not illuminated, so it is not visible.",
+                "Waxing Crescent": "A small sliver of the Moon starts to become illuminated, appearing as a crescent shape.",
+                "First Quarter": "Half of the Moon (the right side as viewed from Earth) is illuminated.",
+                "Waxing Gibbous": "More than half of the Moon is illuminated but it is not yet a full Moon.",
+                "Full Moon": "The entire surface of the Moon is illuminated and visible from Earth.",
+                "Waning Gibbous": "After the full Moon, the illuminated portion of the Moon starts to decrease.",
+                "Last Quarter": "Half of the Moon (the left side as viewed from Earth) is illuminated again.",
+                "Waning Crescent": "The illuminated portion of the Moon returns to a crescent shape, leading back to the New Moon."
+            },
+            "days": "These phases repeat in a cyclical manner each month, with each phase lasting about 3.5 days, resulting in a complete lunar cycle of approximately 29.5 days."
+        }
+    }
+}

@@ -1,0 +1,49 @@
+ {
+    "planets": {
+        "1": {
+            "name": "Mercury",
+            "description": "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the planets in the Solar System.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/220px-Mercury_in_color_-_Prockter07-edit1.jpg"
+        },
+        "2": {
+            "name": "Venus",
+            "description": "Venus is the second planet from the Sun and is the second-brightest natural object in the night sky after the Moon. It is sometimes referred to as the sister planet to Earth due to their similar size and mass.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/PIA23791-Venus-NewlyProcessedView-20200608.jpg/220px-PIA23791-Venus-NewlyProcessedView-20200608.jpg"
+        },
+        "3": {
+            "name": "Earth",
+            "description": "Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 29.2% of Earth's surface is land consisting of continents and islands.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/220px-The_Earth_seen_from_Apollo_17.jpg"
+        },
+        "4": {
+            "name": "Mars",
+            "description": "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. It is often referred to as the Red Planet due to its reddish appearance.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/220px-OSIRIS_Mars_true_color.jpg"
+        },
+        "5": {
+            "name": "Jupiter",
+            "description": "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass one-thousandth that of the Sun, but two-and-a-half times that of all the other planets in the Solar System combined.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg/220px-Jupiter_and_its_shrunken_Great_Red_Spot.jpg"
+        },
+        "6": {
+            "name": "Saturn",
+            "description": "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius about nine times that of Earth.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/220px-Saturn_during_Equinox.jpg"
+        },
+        "7": {
+            "name": "Uranus",
+            "description": "Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/220px-Uranus2.jpg"
+        },
+        "8": {
+            "name": "Neptune",
+            "description": "Neptune is the eighth and farthest known Solar planet from the Sun. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/220px-Neptune_Full.jpg"
+        },
+        "9": {
+            "name": "Pluto",
+            "description": "Pluto is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was the first and the largest Kuiper belt object to be discovered.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Nh-pluto-in-true-color_2x_JPEG.jpg/220px-Nh-pluto-in-true-color_2x_JPEG.jpg"
+        }
+    }
+ }

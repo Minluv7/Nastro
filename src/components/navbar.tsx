@@ -19,7 +19,7 @@ export default function Navbar({className = ""}) {
 
         {/* Hamburger Button (visible on mobile) */}
         <button
-          className="block md:hidden z-10 text-gray-600 focus:outline-none"
+          className="block md:hidden z-20 text-gray-600 focus:outline-none"
           onClick={toggleMenu}
         >
           {isOpen ? (
@@ -66,7 +66,7 @@ export default function Navbar({className = ""}) {
             <a href="/horoscope">Horoscope</a>
           </li>
           <li>
-            <a href="/moon_calendar">Moon Calendar</a>
+            <a href="/moon_phases">Moon Phases</a>
           </li>
           <li>
             <a href="/planets">Planets</a>
@@ -79,26 +79,26 @@ export default function Navbar({className = ""}) {
 
       {/* Mobile Menu */}
       <ul
-  className={`fixed inset-0 bg-background w-full h-full ${
-    isOpen ? "flex" : "hidden"
-  } flex-col justify-center items-center gap-6 p-4 md:hidden`}
->
-  <li>
-    <a href="/">Home</a>
-  </li>
-  <li>
-    <a href="/horoscope">Horoscope</a>
-  </li>
-  <li>
-    <a href="/moon_calendar">Moon Calendar</a>
-  </li>
-  <li>
-    <a href="/planets">Planets</a>
-  </li>
-  <li>
-    <a href="/human">Human</a>
-  </li>
-</ul>
+        className={`fixed z-10 inset-0 bg-background w-full h-full ${
+          isOpen ? "flex" : "hidden"
+        } flex-col justify-center items-center gap-6 p-4 md:hidden`}
+      >
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/horoscope">Horoscope</a>
+        </li>
+        <li>
+          <a href="/moon_phases">Moon Phases</a>
+        </li>
+        <li>
+          <a href="/planets">Planets</a>
+        </li>
+        <li>
+          <a href="/human">Human</a>
+        </li>
+    </ul>
 
     </nav>
   );

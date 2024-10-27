@@ -1,11 +1,9 @@
 "use client";
 import { useState } from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import HouseResults from '@/components/houseResults'; 
 import PlanetResults from '@/components/planetResults'; 
 import Popup from '@/components/popup';
-
-
+import HouseResults from '@/components/houseResults';
+import Image from 'next/image';
 export default function Home() {
     const [fullName, setFullName] = useState<string | null>(null);
     const [placeName, setPlaceName] = useState<string | null>(null);
@@ -63,12 +61,7 @@ export default function Home() {
     <div> 
         <h1 className="text-3xl uppercase font-bold mb-6">Calculate your horoscopes</h1>
         <div className="flex flex-wrap justify-center items-center min-h-screen">
-            <DotLottieReact
-                className="w-full md:w-[50%] items-center"
-                src="https://lottie.host/25e4cfe2-7935-4ff5-b534-8e4106ba61a2/TWME2CFNAO.json"
-                loop
-                autoplay
-            />
+            <Image width={100} height={100} src="/moon/moon.gif" alt="Moon" className='w-full md:w-[25%] items-center'/>
             <div className="w-full md:w-auto flex flex-wrap justify-center">
                 <form 
                     className="bg-white p-6 md:p-14 w-[90%] md:w-[35rem] flex flex-col items-center rounded-[1rem] md:rounded-[1rem_10rem] transition-all duration-300"
@@ -125,20 +118,17 @@ export default function Home() {
                             </div>
                     </label>
                 </form>
-    
                 <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
                     <h2>Horoscope Results:</h2>
                     <p>{fullName}</p>
                     <p>{placeName}</p>
                     <p>{birthday} {timeOfBirth}</p>
-
                     {/* Container for planet and house results */}
                     <div className="flex flex-col md:flex-row">
                         <PlanetResults formData={formData} />
                         <HouseResults formData={formData} />
                     </div>
                 </Popup>
-                
             </div>
         </div>
     </div>

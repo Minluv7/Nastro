@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  h1, h2, h3, p, a {
+  h1, h2, h3, p, a, ol{
     @apply text-textColor;
   }
 }

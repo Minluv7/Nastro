@@ -1,0 +1,10 @@
+{
+    "New Moon": "/moonPhases/newMoon.png",
+    "Waxing Crescent": "/moonPhases/waxingCrescent.png",
+    "First Quarter": "/moonPhases/firstQuarter.png",
+    "Waxing Gibbous": "/moonPhases/waxingGibbous.png",
+    "Full Moon": "/moonPhases/fullMoon.png",
+    "Waning Gibbous": "/moonPhases/waningGibbous.png",
+    "Last Quarter": "/moonPhases/lastQuarter.png",
+    "Waning Crescent": "/moonPhases/waningCrescent.png"
+}

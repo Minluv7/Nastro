@@ -19,7 +19,7 @@ export default function AudioPlayer() {
   };
 
   return (
-    <div className='float-right fixed top-[44rem] right-[3rem]'>
+    <div className='float-right fixed top-[40rem] right-[3rem]'>
       {/* Button voor aan-/uitzetten van de audio */}
       <button
         type="button"
