@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import "./globals.css";
+import Footer from "@/components/footer";
 import ClientOnlyAudioPlayer from "@/components/clientOnlyAudioPlayer"; // Gebruik de client-only component
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
        
         {children}
         <ClientOnlyAudioPlayer/> {/* Voeg de Client Component hier toe */}
+        <Footer/>
       </body>
     </html>
   );
