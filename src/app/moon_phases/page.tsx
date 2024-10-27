@@ -49,8 +49,9 @@ export default function MoonPhase() {
       {moonPhase && moonPhaseImage ? (
         <div>
           <h1 className="text-3xl uppercase font-bold mb-6">8 Phases of the Moon</h1>
-          <div className='flex justify-center mb-6'>
-            <Image width={200} height={200} src={moonData.Moon.image} alt='moon' />
+          <div className='flex items-center justify-center gap-12 flex-wrap mb-8'>
+            <h2 className="text-l font-semibold">Current Moon Phase: {moonPhase}</h2>
+            <Image width={100} height={100} src={moonPhaseImage} alt={moonPhase} style={{ width: '12.5rem', height: '12.5rem' }} />
           </div>
         
           <p className='text-l mb-6'>{moonData.Moon.description.general}</p>
@@ -60,9 +61,9 @@ export default function MoonPhase() {
             ))}
           </ol>
           <p className='text-l mb-6'>{moonData.Moon.description.days}</p>
-          <div className='flex items-center justify-center gap-12 flex-wrap '>
-            <h2 className="text-l font-semibold">Current Moon Phase: {moonPhase}</h2>
-            <Image width={100} height={100} src={moonPhaseImage} alt={moonPhase} style={{ width: '12.5rem', height: '12.5rem' }} />
+          
+          <div className='flex justify-center mb-6'>
+            <Image width={200} height={200} src={moonData.Moon.image} alt='moon' />
           </div>
         </div>
       ) : (
