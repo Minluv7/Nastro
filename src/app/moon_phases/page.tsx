@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import moonPhasesImages from '../../../public/database/moonPhases.json';
-import moonData from '../../../public/database/moon.json'; // Adjust the path as necessary
+import moonData from '../../../public/database/moon.json';
 
 export default function MoonPhase() {
   const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);

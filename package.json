@@ -10,16 +10,20 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.9.0",
+    "@react-three/drei": "^9.115.0",
+    "@react-three/fiber": "^8.17.10",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.5",
-    "sweph": "^2.10.3-1"
+    "sweph": "^2.10.3-1",
+    "three": "^0.169.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.169.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
     "postcss": "^8",
