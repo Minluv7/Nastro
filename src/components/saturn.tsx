@@ -7,21 +7,27 @@ import * as THREE from 'three';
 export function Saturn(props: JSX.IntrinsicElements['group']) {
     const { nodes, materials} = useGLTF('/saturn.glb')
     const groupRef = useRef<THREE.Group>(null);
+    const orbitGroupRef = useRef<THREE.Group>(null);
 
-  useFrame(() => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y += 0.01; // Adjust rotation speed here
-    }
-  });
+    useFrame(() => {
+      if (groupRef.current) {
+        groupRef.current.rotation.y += 0.01; // Adjust self-rotation speed
+      }
+  
+      // Orbiting around a central point
+      if (orbitGroupRef.current) {
+        orbitGroupRef.current.rotation.y +=  0.0001; // Adjust orbit speed here
+      }
+    });
 
   return (
-    <group ref={groupRef} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={0.1}>
+    <group ref={orbitGroupRef} {...props} dispose={null}>
+      <group name="Sketchfab_Scene" position={[300, 0, 0]}>
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={0.14}>
           <group name="56fb5d81d5a845599d5e60534f293915fbx" rotation={[Math.PI / 2, 0, 0]}>
             <group name="Object_2">
               <group name="RootNode">
-                <group name="Saturn_Rings" rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+                <group name="Saturn_Rings" rotation={[-Math.PI / 2, 0, 0]} scale={100} >
                   <mesh
                     name="Saturn_Rings_Material_#63_0"
                     castShadow

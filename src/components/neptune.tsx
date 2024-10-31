@@ -8,15 +8,22 @@ import * as THREE from 'three';
 export function Neptune(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/neptune.glb')
   const groupRef = useRef<THREE.Group>(null);
+  const orbitGroupRef = useRef<THREE.Group>(null);
 
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.01; // Adjust rotation speed here
+      groupRef.current.rotation.y += 0.01; // Adjust self-rotation speed
+    }
+
+    // Orbiting around a central point
+    if (orbitGroupRef.current) {
+      orbitGroupRef.current.rotation.y +=  0.000018; // Adjust orbit speed here
     }
   });
 
   return (
-    <group ref={groupRef} {...props} dispose={null}>
+    <group ref={orbitGroupRef} {...props} dispose={null} scale={0.65}>
+      <group  position={[300, 0, 0]}>
       <mesh
         castShadow
         receiveShadow
@@ -24,6 +31,7 @@ export function Neptune(props: JSX.IntrinsicElements['group']) {
         geometry={nodes.Earth_Planet_0.geometry}
         material={materials.Planet}
       />
+      </group>
     </group>
   )
 }

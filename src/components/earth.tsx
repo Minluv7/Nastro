@@ -8,14 +8,21 @@ import * as THREE from 'three';
 export function Earth(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/earth_globe.glb')
   const groupRef = useRef<THREE.Group>(null);
+  const orbitGroupRef = useRef<THREE.Group>(null);
+
   useFrame(() => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.01; // Adjust rotation speed here
+      groupRef.current.rotation.y += 0.1; // Adjust self-rotation speed
+    }
+
+    // Orbiting around a central point
+    if (orbitGroupRef.current) {
+      orbitGroupRef.current.rotation.y +=  0.003; // Adjust orbit speed here
     }
   });
   return (
-    <group ref={groupRef} {...props} dispose={null}>
-      <group position={[-5.177, -20.679, 0]} rotation={[Math.PI / 2, -0.462, Math.PI]} scale={4} >
+    <group ref={orbitGroupRef} {...props} dispose={null}>
+      <group position={[300, 0, 0]} rotation={[Math.PI / 2, -0.462, Math.PI]} scale={2}>
         <group rotation={[-Math.PI, 0, 0]}>
           <mesh
             castShadow

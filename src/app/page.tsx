@@ -3,7 +3,11 @@ import { useState } from 'react';
 import PlanetResults from '@/components/planetResults'; 
 import Popup from '@/components/popup';
 import HouseResults from '@/components/houseResults';
-import Image from 'next/image';
+
+import { Environment, OrbitControls } from '@react-three/drei';
+import { Moon } from '@/components/moon';
+import { Canvas } from '@react-three/fiber';
+
 export default function Home() {
     const [fullName, setFullName] = useState<string | null>(null);
     const [placeName, setPlaceName] = useState<string | null>(null);
@@ -61,7 +65,15 @@ export default function Home() {
     <div> 
         <h1 className="text-3xl uppercase font-bold mb-6">Calculate your horoscopes</h1>
         <div className="flex flex-wrap justify-center items-center min-h-screen">
-            <Image width={100} height={100} src="/moon/moon.gif" alt="Moon" className='w-full md:w-[25%] items-center'/>
+            <Canvas className='w-full md:w-1/2 h-auto items-center'>
+                <Environment preset="sunset" />
+                <OrbitControls
+                    minDistance={150} // Zoom distances suitable for desktop
+                    maxDistance={500}
+                />
+                <Moon/>
+            </Canvas>
+
             <div className="w-full md:w-auto flex flex-wrap justify-center">
                 <form 
                     className="bg-white p-6 md:p-14 w-[90%] md:w-[35rem] flex flex-col items-center rounded-[1rem] md:rounded-[1rem_10rem] transition-all duration-300"
