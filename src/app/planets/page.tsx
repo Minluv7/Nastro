@@ -11,6 +11,7 @@ import { Venus } from '@/components/venus';
 
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
+import { Stars } from '@/components/stars';
 
 export default function PlanetPage() {
   const [loading, setLoading] = useState(true);
@@ -20,9 +21,11 @@ export default function PlanetPage() {
   };
 
   return (
-    <div className="h-[100vh] w-[100vw] overflow-hidden relative">
+    <div className="h-[70vh] w-full relative">
+      {/* Set height to 200vh or more to enable vertical scrolling */}
       <h1 className="text-3xl uppercase font-bold mb-6">Planets</h1>
-      <p>All planets has an owen route. each of them is creadit of </p>
+      <p>Each planet follows its own unique orbit, each created with careful attention to detail.</p>
+
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
           <p className="text-white text-xl">Loading...</p>
@@ -31,6 +34,7 @@ export default function PlanetPage() {
       <Canvas onCreated={handleLoaded}>
         <Environment preset="sunset" />
         <OrbitControls minDistance={150} maxDistance={500} />
+        <Stars />
 
         <Mercury position={[-1090, 0, 0]} />
         <Venus position={[-900, 0, 0]} />
