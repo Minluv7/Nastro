@@ -17,7 +17,7 @@ export function Jupiter(props: JSX.IntrinsicElements['group']) {
 
     // Orbiting around a central point
     if (orbitGroupRef.current) {
-      orbitGroupRef.current.rotation.y += 0.00025; // Adjust orbit speed here
+      orbitGroupRef.current.rotation.y += 0.0025; // Adjust orbit speed here
     }
   });
 

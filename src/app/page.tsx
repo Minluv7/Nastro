@@ -8,6 +8,7 @@ import { Environment, OrbitControls } from '@react-three/drei';
 import { Moon } from '@/components/moon';
 import { Canvas } from '@react-three/fiber';
 
+
 export default function Home() {
     const [fullName, setFullName] = useState<string | null>(null);
     const [placeName, setPlaceName] = useState<string | null>(null);
@@ -60,12 +61,15 @@ export default function Home() {
             console.error('Error fetching horoscope:', error);
         }
     };
+
+
     
     return (
     <div> 
-        <h1 className="text-3xl uppercase font-bold mb-6">Calculate your horoscopes</h1>
-        <div className="flex flex-wrap justify-center items-center min-h-screen">
-            <Canvas className='w-full md:w-1/2 h-auto items-center'>
+        <h1 >Calculate your horoscopes</h1>
+        <div className="flex flex-wrap justify-center items-center">
+            <div className='w-100'>
+            <Canvas>
                 <Environment preset="sunset" />
                 <OrbitControls
                     minDistance={150} // Zoom distances suitable for desktop
@@ -73,7 +77,7 @@ export default function Home() {
                 />
                 <Moon/>
             </Canvas>
-
+            </div>
             <div className="w-full md:w-auto flex flex-wrap justify-center">
                 <form 
                     className="bg-white p-6 md:p-14 w-[90%] md:w-[35rem] flex flex-col items-center rounded-[1rem] md:rounded-[1rem_10rem] transition-all duration-300"

@@ -17,7 +17,7 @@ export function Uranus(props: JSX.IntrinsicElements['group']) {
 
     // Orbiting around a central point
     if (orbitGroupRef.current) {
-      orbitGroupRef.current.rotation.y +=  0.000035; // Adjust orbit speed here
+      orbitGroupRef.current.rotation.y +=  0.0035; // Adjust orbit speed here
     }
   });
 

@@ -17,7 +17,7 @@ export function Neptune(props: JSX.IntrinsicElements['group']) {
 
     // Orbiting around a central point
     if (orbitGroupRef.current) {
-      orbitGroupRef.current.rotation.y +=  0.000018; // Adjust orbit speed here
+      orbitGroupRef.current.rotation.y +=  0.0018; // Adjust orbit speed here
     }
   });
 

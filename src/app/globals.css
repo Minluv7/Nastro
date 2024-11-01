@@ -27,3 +27,12 @@ body {
     text-wrap: balance;
   }
 }
+
+.canvas-wrapper {
+  position: static; /* of verwijder via unset */
+  overflow: visible;
+  pointer-events: none; /* aanpassen als nodig */
+  touch-action: auto;
+  display: flex;
+  flex-wrap: wrap;
+}

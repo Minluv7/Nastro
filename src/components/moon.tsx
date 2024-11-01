@@ -15,7 +15,7 @@ export function Moon(props: JSX.IntrinsicElements['group']) {
     });
 
   return (
-    <group ref={groupRef} {...props} dispose={null}  scale={1.5}>
+    <group ref={groupRef} {...props} dispose={null}  scale={1.8}>
       <mesh
         castShadow
         receiveShadow
