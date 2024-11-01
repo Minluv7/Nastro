@@ -1,0 +1,40 @@
+{
+    "auraColors": [
+      {
+        "name": "Red",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 329 348' fill='none'> <g filter='url(#filter0_f_70_38)'><ellipse cx='164.5' cy='174' rx='104.5' ry='114' fill='#C41E3A'/></g><defs><filter id='filter0_f_70_38' x='0' y='0' width='329' height='348' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'><feFlood flood-opacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='30' result='effect1_foregroundBlur_70_38'/></filter></defs></svg>",
+        "description": "Red is the color of fire and blood, so it is associated with energy, war, danger, strength, power, determination as well as passion, desire, and love."
+      },
+      {
+        "name": "Orange",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 329 348' fill='none'><g filter='url(#filter0_f_70_38)'><ellipse cx='164.5' cy='174' rx='104.5' ry='114' fill='#FFA500'/></g><defs><filter id='filter0_f_70_38' x='0' y='0' width='329' height='348' filterUnits='userSpaceOnUse' colorInterpolationFilters='sRGB'><feFlood floodOpacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='30' result='effect1_foregroundBlur_70_38'/></filter></defs></svg>",
+        "description": "Orange combines the energy of red and the happiness of yellow. It is associated with joy, sunshine, and the tropics. Orange represents enthusiasm, fascination, happiness, creativity, determination, attraction, success, encouragement, and stimulation."
+      },
+      {
+        "name": "Yellow",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 329 348' fill='none'><g filter='url(#filter0_f_70_38)'><ellipse cx='164.5' cy='174' rx='104.5' ry='114' fill='#FFFF00'/></g><defs><filter id='filter0_f_70_38' x='0' y='0' width='329' height='348' filterUnits='userSpaceOnUse' colorInterpolationFilters='sRGB'><feFlood floodOpacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='30' result='effect1_foregroundBlur_70_38'/></filter></defs></svg>",
+        "description": "Yellow is the color of sunshine. It's associated with joy, happiness, intellect, and energy."
+      },
+      {
+        "name": "Green",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 329 348' fill='none'><g filter='url(#filter0_f_70_38)'><ellipse cx='164.5' cy='174' rx='104.5' ry='114' fill='#008000'/></g><defs><filter id='filter0_f_70_38' x='0' y='0' width='329' height='348' filterUnits='userSpaceOnUse' colorInterpolationFilters='sRGB'><feFlood floodOpacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='30' result='effect1_foregroundBlur_70_38'/></filter></defs></svg>",
+        "description": "Green is the color of nature. It symbolizes growth, harmony, freshness, and fertility. Green has strong emotional correspondence with safety. Dark green is also commonly associated with money."
+      },
+      {
+        "name": "Blue",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 329 348' fill='none'><g filter='url(#filter0_f_70_38)'><ellipse cx='164.5' cy='174' rx='104.5' ry='114' fill='#0000FF'/></g><defs><filter id='filter0_f_70_38' x='0' y='0' width='329' height='348' filterUnits='userSpaceOnUse' colorInterpolationFilters='sRGB'><feFlood floodOpacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='30' result='effect1_foregroundBlur_70_38'/></filter></defs></svg>",
+        "description": "Blue is the color of the sky and sea. It is often associated with depth and stability. It symbolizes trust, loyalty, wisdom, confidence, intelligence, faith, truth, and heaven."
+      },
+      {
+        "name": "Indigo",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 329 348' fill='none'><g filter='url(#filter0_f_70_38)'><ellipse cx='164.5' cy='174' rx='104.5' ry='114' fill='#4B0082'/></g><defs><filter id='filter0_f_70_38' x='0' y='0' width='329' height='348' filterUnits='userSpaceOnUse' colorInterpolationFilters='sRGB'><feFlood floodOpacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='30' result='effect1_foregroundBlur_70_38'/></filter></defs></svg>",
+        "description": "Indigo is the color of intuition, perception, and the higher mind. It is the color of deep inner feelings."
+      },
+      {
+        "name": "Purple",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' width='250' height='250' viewBox='0 0 329 348' fill='none'><g filter='url(#filter0_f_70_38)'><ellipse cx='164.5' cy='174' rx='104.5' ry='114' fill='#800080'/></g><defs><filter id='filter0_f_70_38' x='0' y='0' width='329' height='348' filterUnits='userSpaceOnUse' colorInterpolationFilters='sRGB'><feFlood floodOpacity='0' result='BackgroundImageFix'/><feBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/><feGaussianBlur stdDeviation='30' result='effect1_foregroundBlur_70_38'/></filter></defs></svg>",
+        "description": "Purple combines the stability of blue and the energy of red. Purple is associated with royalty. It symbolizes power, nobility, luxury, and ambition. It conveys wealth and extravagance. Purple is associated with wisdom, dignity, independence, creativity, mystery, and magic."
+      }
+    ]
+  }
+  

@@ -40,7 +40,6 @@ export default function Page() {
     <div className="p-4">
     <h1 className="text-3xl uppercase font-bold mb-6">Horoscopes</h1>
     {error && <p className="text-red-500">{error}</p>}
-    
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {horoscopes.map((horoscope) => (
       <Link href={`/horoscope/${horoscope.sign}`} key={horoscope.sign}>

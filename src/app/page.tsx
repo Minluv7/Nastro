@@ -68,7 +68,7 @@ export default function Home() {
     <div> 
         <h1 >Calculate your horoscopes</h1>
         <div className="flex flex-wrap justify-center items-center">
-            <div className='w-100'>
+            <div className='w-100 my-8'>
             <Canvas>
                 <Environment preset="sunset" />
                 <OrbitControls
