@@ -2,17 +2,10 @@
 import { useEffect, useState } from 'react';
 
 export default function Human() {
-  interface Aura {
-    name: string;
-    svg: string;
-    description: string;
-    location: string;
-    color: string;
-  }
 
-  const [auraColors, setAuraColors] = useState<Aura[]>([]);
+  const [auraColors, setAuraColors] = useState<AuraColors[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedAura, setSelectedAura] = useState<Aura | null>(null); // State for the selected aura
+  const [selectedAura, setSelectedAura] = useState<AuraColors | null>(null); // State for the selected aura
   const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
 
   useEffect(() => {
@@ -34,7 +27,7 @@ export default function Human() {
     fetchAuraColors();
   }, []);
 
-  const openModal = (aura: Aura) => {
+  const openModal = (aura: AuraColors) => {
     setSelectedAura(aura);
     setIsModalOpen(true);
   };

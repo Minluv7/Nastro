@@ -5,9 +5,18 @@ import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-export function Moon(props: JSX.IntrinsicElements['group']) {
-    const { nodes, materials } = useGLTF('/moon.glb')
+interface MoonProps {
+  onLoad?: () => void; // Voeg onLoad prop toe
+}
+
+export function Moon({onLoad, ...props}: MoonProps) {
+    const { nodes, materials } = useGLTF('/moon.glb', true);
+    React.useEffect(() => {
+        if (onLoad) onLoad();
+    }, [onLoad]);
     const groupRef = useRef<THREE.Group>(null);
+    
+    
     useFrame(() => {
         if (groupRef.current) {
           groupRef.current.rotation.y += 0.01; // Adjust self-rotation speed

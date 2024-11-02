@@ -3,11 +3,9 @@ import { useState } from 'react';
 import PlanetResults from '@/components/planetResults'; 
 import Popup from '@/components/popup';
 import HouseResults from '@/components/houseResults';
-
 import { Environment, OrbitControls } from '@react-three/drei';
 import { Moon } from '@/components/moon';
 import { Canvas } from '@react-three/fiber';
-
 
 export default function Home() {
     const [fullName, setFullName] = useState<string | null>(null);
@@ -17,6 +15,12 @@ export default function Home() {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [formData, setFormData] = useState<any | null>(null);
     const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const [loading, setLoading] = useState(true); // Nieuw: loading state
+
+    const handleMoonLoad = () => {
+        setLoading(false); // Stel loading in op false als de maan geladen is
+    };
 
     const geocodePlaceName = async (placeName: string) => {
         const geocodeUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(placeName)}&format=json&limit=1`;
@@ -67,6 +71,11 @@ export default function Home() {
     return (
     <div> 
         <h1 >Calculate your horoscopes</h1>
+        {loading && 
+         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
+         <p className="text-white text-xl">Loading...</p>
+       </div>
+        }
         <div className="flex flex-wrap justify-center items-center">
             <div className='w-100 my-8'>
             <Canvas>
@@ -75,7 +84,7 @@ export default function Home() {
                     minDistance={150} // Zoom distances suitable for desktop
                     maxDistance={500}
                 />
-                <Moon/>
+                <Moon onLoad={handleMoonLoad} />
             </Canvas>
             </div>
             <div className="w-full md:w-auto flex flex-wrap justify-center">

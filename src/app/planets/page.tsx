@@ -35,7 +35,6 @@ export default function PlanetPage() {
         <Environment preset="sunset" />
         <OrbitControls minDistance={150} maxDistance={500} />
         <Stars />
-
         <Mercury position={[-1090, 0, 0]} />
         <Venus position={[-900, 0, 0]} />
         <Earth position={[-700, 0, 0]} />
