@@ -1,14 +1,15 @@
 // components/HouseResults.tsx
 import { useState, useEffect } from 'react';
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const HouseResults = ({ formData }: { formData: any }) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const [houseData, setHouse] = useState< any | null>(null);
+    const [houseData, setHouseData] = useState<any | null>(null);
+    const [loading, setLoading] = useState(true); // New loading state
 
     useEffect(() => {
         const fetchHouseData = async () => {
-            if (!formData) return;  // Wacht op formData voordat je de fetch uitvoert
+            if (!formData) return;  // Wait for formData before fetching data
+            setLoading(true); // Start loading
 
             try {
                 const houseResponse = await fetch("/api/houses", {
@@ -19,9 +20,11 @@ const HouseResults = ({ formData }: { formData: any }) => {
     
                 const responseText = await houseResponse.text();
                 const houseData = JSON.parse(responseText);
-                setHouse(houseData);
+                setHouseData(houseData);
             } catch (error) {
                 console.error('Error fetching house data:', error);
+            } finally {
+                setLoading(false); // End loading
             }
         };
 
@@ -48,23 +51,26 @@ const HouseResults = ({ formData }: { formData: any }) => {
         return Math.round(num * 100) / 100;
     };
 
+    if (loading) {
+        return <p className='text-background'>Loading house data...</p>; // Display loading message
+    }
+
     return (
         <div>
             {houseData && houseData.houses && (
                 <div className="m-8">
-                    <h2 className="text-xl font-bold text-blue-600">House Results:</h2>
+                    <h2 className="text-xl font-bold text-background">House Results:</h2>
                     <ul className="list-disc list-inside space-y-2">
                         {Object.entries(houseData.houses).map(([key, degree]) => {
                             const degreeValue = roundToTwoDecimals(degree as number);
                             return (
-                                <li key={key} className="text-gray-700">
+                                <li key={key} className="text-background">
                                     {key.charAt(0).toUpperCase() + key.slice(1)}: {degreeValue}° - {getSignFromDegree(degreeValue)}
                                 </li>
                             );
                         })}
                     </ul>
-                    {/* Herhaal de informatie van huis 1 */}
-                    <p className="text-gray-700 mt-4">
+                    <p className="text-background mt-4">
                         Your ascendant is: {getSignFromDegree(roundToTwoDecimals(houseData.houses.house1 as number))}
                     </p>
                 </div>

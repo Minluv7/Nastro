@@ -18,7 +18,6 @@ export default function RootLayout({
     <html>
       <body className="bg-background">
         <Navbar className="mb-8" />
-       
         {children}
         <ClientOnlyAudioPlayer/> {/* Voeg de Client Component hier toe */}
         <Footer/>

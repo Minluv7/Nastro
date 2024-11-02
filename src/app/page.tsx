@@ -70,7 +70,7 @@ export default function Home() {
     
     return (
     <div> 
-        <h1 >Calculate your horoscopes</h1>
+        <h1 className="text-3xl uppercase font-bold mb-6">Calculate your horoscopes</h1>
         {loading && 
          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
          <p className="text-white text-xl">Loading...</p>
@@ -144,10 +144,10 @@ export default function Home() {
                     </label>
                 </form>
                 <Popup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
-                    <h2>Horoscope Results:</h2>
-                    <p>{fullName}</p>
-                    <p>{placeName}</p>
-                    <p>{birthday} {timeOfBirth}</p>
+                    <h2 className='text-background text-2xl font-semibold'>Horoscope Results:</h2>
+                    <p className='text-background'>{fullName}</p>
+                    <p className='text-background'>{placeName}</p>
+                    <p className='text-background'>{birthday} {timeOfBirth}</p>
                     {/* Container for planet and house results */}
                     <div className="flex flex-col md:flex-row">
                         <PlanetResults formData={formData} />

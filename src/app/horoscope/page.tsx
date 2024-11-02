@@ -6,6 +6,7 @@ import Link from 'next/link';
 export default function Page() {
   const [horoscopes, setHoroscopes] = useState<Horoscope[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
     const fetchHoroscopes = async () => {
@@ -16,20 +17,20 @@ export default function Page() {
         }
         const data = await response.json();
 
-        // Log de opgehaalde data om de structuur te verifiëren
         console.log('Fetched data:', data);
 
-        // Controleer of 'horoscopes' bestaat en een array is
         if (data.horoscopes && Array.isArray(data.horoscopes)) {
-          setHoroscopes(data.horoscopes); // Haal de horoscopes array eruit
+          setHoroscopes(data.horoscopes);
         } else {
           console.error('Fetched data is not an array:', data);
-          setHoroscopes([]); // Zet op een lege array of behandel de fout
+          setHoroscopes([]);
         }
       } catch (error) {
         console.error('Error fetching horoscopes:', error);
         setError('Failed to fetch horoscopes.');
-        setHoroscopes([]); // Zet op een lege array of behandel de fout
+        setHoroscopes([]);
+      } finally {
+        setLoading(false); // Set loading to false once data is fetched
       }
     };
 
@@ -38,30 +39,32 @@ export default function Page() {
 
   return (
     <div className="p-4">
-    <h1 className="text-3xl uppercase font-bold mb-6">Horoscopes</h1>
-    {error && <p className="text-red-500">{error}</p>}
-    <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {horoscopes.map((horoscope) => (
-      <Link href={`/horoscope/${horoscope.sign}`} key={horoscope.sign}>
-        <li 
-          key={horoscope.sign} 
-          className="flex flex-col items-center shadow-md p-4 rounded-lg transform transition-transform duration-300 hover:scale-105"
-        >
-          <Image
-            width={400}
-            height={400}
-            src={horoscope.image}
-            alt={horoscope.sign}
-            className="w-32 h-40"
-          />
-          <h2 className="text-xl font-semibold mt-4">{horoscope.sign}</h2>
-          <p className="text-gray-600">{horoscope.dateRange}</p>
-        </li>
-      </Link>
-      ))}
-    </ul>
-  </div>
-  
+      <h1 className="text-3xl uppercase font-bold mb-6">Horoscopes</h1>
+      {loading && (
+        <div className="flex items-center justify-center min-h-[50vh]">
+          <p className="text-xl">Loading...</p>
+        </div>
+      )}
+      {error && <p className="text-red-500">{error}</p>}
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {!loading && horoscopes.map((horoscope) => (
+          <Link href={`/horoscope/${horoscope.sign}`} key={horoscope.sign}>
+            <li
+              className="flex flex-col items-center shadow-md p-4 rounded-lg transform transition-transform duration-300 hover:scale-105"
+            >
+              <Image
+                width={400}
+                height={400}
+                src={horoscope.image}
+                alt={horoscope.sign}
+                className="w-32 h-40"
+              />
+              <h2 className="text-xl font-semibold mt-4">{horoscope.sign}</h2>
+              <p className="text-gray-600">{horoscope.dateRange}</p>
+            </li>
+          </Link>
+        ))}
+      </ul>
+    </div>
   );
 }
-

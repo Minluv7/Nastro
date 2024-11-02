@@ -2,11 +2,11 @@
 import { useEffect, useState } from 'react';
 
 export default function Human() {
-
   const [auraColors, setAuraColors] = useState<AuraColors[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedAura, setSelectedAura] = useState<AuraColors | null>(null); // State for the selected aura
-  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [loadingVideo, setLoadingVideo] = useState(true); // Loading state for video
+  const [selectedAura, setSelectedAura] = useState<AuraColors | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchAuraColors = async () => {
@@ -48,16 +48,19 @@ export default function Human() {
         <p className="py-4">Some people consciously try to strengthen or cleanse their aura through meditation, breathing techniques, energy healing, or working with crystals. This is done to release negative energies and bring the aura into balance, which in turn may improve physical and mental health. Additionally, auras are sometimes linked to chakras, the energy centers in the body that are each connected to different aspects of our health and well-being.</p>
       </div>
 
-      <h2 className='uppercase text-xl'>Aura Colors</h2>
+
+      <h2 className="uppercase text-xl">Aura Colors</h2>
       {loading ? (
-        <p>Loading aura colors...</p>
+        <div className="flex items-center justify-center my-8">
+          <p className="text-xl">Loading...</p>
+        </div>
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {auraColors.map((aura) => (
             <li
               key={aura.name}
               className="flex flex-col items-center shadow-md p-4 rounded-lg transform transition-transform duration-300 hover:scale-105 cursor-pointer"
-              onClick={() => openModal(aura)} // Open modal on click
+              onClick={() => openModal(aura)}
             >
               <div dangerouslySetInnerHTML={{ __html: aura.svg }} />
               <h2 className="text-xl uppercase font-semibold mt-4">{aura.name}</h2>
@@ -73,9 +76,9 @@ export default function Human() {
             {selectedAura && (
               <>
                 <h2 className="text-2xl text-background font-bold mb-4">{selectedAura.name}</h2>
-                <p className='text-background pb-4'>Location: {selectedAura.location}</p>
-                <p  className='text-background pb-4'>Color: {selectedAura.color}</p>
-                <p className='text-background'>{selectedAura.description}</p>
+                <p className="text-background pb-4">Location: {selectedAura.location}</p>
+                <p className="text-background pb-4">Color: {selectedAura.color}</p>
+                <p className="text-background">{selectedAura.description}</p>
               </>
             )}
             <button
@@ -88,8 +91,13 @@ export default function Human() {
         </div>
       )}
 
-      <div className='flex items-center flex-col gap-8'>
-      <h2 className="uppercase text-xl">Opening Chakra&apos;s with Avatar</h2>
+      <div className="flex items-center flex-col gap-8">
+        <h2 className="uppercase text-xl">Opening Chakras with Avatar</h2>
+        {loadingVideo && (
+          <div className="flex items-center justify-center my-4">
+            <p className="text-xl">Loading video...</p>
+          </div>
+        )}
         <div className="responsive-container">
           <iframe
             src="https://www.youtube.com/embed/cH-HT9WCtiQ?si=AsJUZdUYU0lFCOCa&amp;start=4"
@@ -97,6 +105,7 @@ export default function Human() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
+            onLoad={() => setLoadingVideo(false)} // Set loadingVideo to false when iframe finishes loading
           ></iframe>
         </div>
       </div>

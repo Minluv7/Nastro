@@ -67,7 +67,9 @@ export default function MoonPhase() {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
+          <p className="text-white text-xl">Loading...</p>
+        </div>
       )}
     </div>
   );
