@@ -6,6 +6,8 @@ export default function Human() {
     name: string;
     svg: string;
     description: string;
+    location: string;
+    color: string;
   }
 
   const [auraColors, setAuraColors] = useState<Aura[]>([]);
@@ -78,6 +80,8 @@ export default function Human() {
             {selectedAura && (
               <>
                 <h2 className="text-2xl text-background font-bold mb-4">{selectedAura.name}</h2>
+                <p className='text-background pb-4'>Location: {selectedAura.location}</p>
+                <p  className='text-background pb-4'>Color: {selectedAura.color}</p>
                 <p className='text-background'>{selectedAura.description}</p>
               </>
             )}
@@ -93,16 +97,15 @@ export default function Human() {
 
       <div className='flex items-center flex-col gap-8'>
       <h2 className="uppercase text-xl">Opening Chakra&apos;s with Avatar</h2>
-<div className="responsive-container">
-  <iframe
-    src="https://www.youtube.com/embed/cH-HT9WCtiQ?si=AsJUZdUYU0lFCOCa&amp;start=4"
-    title="YouTube video player"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-  ></iframe>
-</div>
-
+        <div className="responsive-container">
+          <iframe
+            src="https://www.youtube.com/embed/cH-HT9WCtiQ?si=AsJUZdUYU0lFCOCa&amp;start=4"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );
