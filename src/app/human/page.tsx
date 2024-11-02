@@ -92,16 +92,17 @@ export default function Human() {
       )}
 
       <div className='flex items-center flex-col gap-8'>
-        <h2 className='uppercase text-xl'>Opening Chakra&apos;s with Avatar</h2>
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/cH-HT9WCtiQ?si=AsJUZdUYU0lFCOCa&amp;start=4"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+      <h2 className="uppercase text-xl">Opening Chakra&apos;s with Avatar</h2>
+<div className="responsive-container">
+  <iframe
+    src="https://www.youtube.com/embed/cH-HT9WCtiQ?si=AsJUZdUYU0lFCOCa&amp;start=4"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
+</div>
+
       </div>
     </div>
   );
