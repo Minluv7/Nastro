@@ -45,5 +45,6 @@ export default function PlanetPage() {
         <Neptune position={[400, 0, 0]} />
       </Canvas>
     </div>
+
   );
 }
